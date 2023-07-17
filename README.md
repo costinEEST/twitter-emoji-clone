@@ -14,6 +14,12 @@ pnpm create t3-app@latest
 pnpm add @clerk/nextjs
 ```
 
+- [Update the types](https://github.com/prisma/prisma/discussions/4568) to reflect the schema changes:
+
+```bash
+prisma generate
+```
+
 # Docs
 
 - [readme](docs.md)
@@ -25,6 +31,8 @@ pnpm add @clerk/nextjs
 - https://clerk.com/docs/nextjs/middleware#auth-middleware
 - https://clerk.com/docs/component-reference/sign-in-button
 - https://clerk.com/docs/component-reference/signoutbutton
+- https://axiom.co/vercel
+- https://www.prisma.io/docs/concepts/components/prisma-schema/data-model
 
 # Logs
 
@@ -32,6 +40,7 @@ pnpm add @clerk/nextjs
 - https://vercel.com/costineest/twitter-emoji-clone
 - https://vercel.com/costineest/twitter-emoji-clone/settings/environment-variables
 - https://vercel.com/costineest/twitter-emoji-clone/settings/functions
+- [Axiom's Vercel integration](https://vercel.com/dashboard/integrations/icfg_R8gE1OnqThhx6jPeAiBnfOFl)
 
 # Tool
 
