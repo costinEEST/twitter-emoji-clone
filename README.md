@@ -33,6 +33,8 @@ prisma generate
 - https://clerk.com/docs/component-reference/signoutbutton
 - https://axiom.co/vercel
 - https://www.prisma.io/docs/concepts/components/prisma-schema/data-model
+- https://tailwindcss.com/docs/customizing-colors
+- https://trpc.io/docs/server/error-handling
 
 # Logs
 
@@ -41,7 +43,9 @@ prisma generate
 - https://vercel.com/costineest/twitter-emoji-clone/settings/environment-variables
 - https://vercel.com/costineest/twitter-emoji-clone/settings/functions
 - [Axiom's Vercel integration](https://vercel.com/dashboard/integrations/icfg_R8gE1OnqThhx6jPeAiBnfOFl)
+- https://youtu.be/YkOSUVzOAA4?t=4102
 
 # Tool
 
 - https://github.com/prisma/language-tools/tree/main/packages/vscode
+- [Auto open the browser when running dev command](https://github.com/vercel/next.js/discussions/13448#discussioncomment-1902555) + https://twitter.com/housecor/status/1389921190089736195

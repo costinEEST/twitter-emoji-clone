@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "browser": "open http://0.0.0.0:3009",
+    "dev": "next dev -p 3009 & $npm_execpath browser",
     "postinstall": "prisma generate",
     "prisma": "prisma db push",
     "lint": "next lint",
@@ -20,6 +21,7 @@
     "@trpc/next": "^10.26.0",
     "@trpc/react-query": "^10.26.0",
     "@trpc/server": "^10.26.0",
+    "dayjs": "^1.11.9",
     "next": "^13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
