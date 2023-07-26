@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-orange-200 text-slate-100;
+  @apply bg-orange-700 text-slate-100;
 }

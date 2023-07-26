@@ -1,6 +1,6 @@
 > Clone of [@t3dotgg](https://github.com/t3dotgg/chirp)'s project.
 
-# Command
+# CLI
 
 - Starter template:
 
@@ -35,6 +35,7 @@ prisma generate
 - https://www.prisma.io/docs/concepts/components/prisma-schema/data-model
 - https://tailwindcss.com/docs/customizing-colors
 - https://trpc.io/docs/server/error-handling
+- https://flowbite.com/docs/components/spinner/#default-spinner
 
 # Logs
 
@@ -43,7 +44,12 @@ prisma generate
 - https://vercel.com/costineest/twitter-emoji-clone/settings/environment-variables
 - https://vercel.com/costineest/twitter-emoji-clone/settings/functions
 - [Axiom's Vercel integration](https://vercel.com/dashboard/integrations/icfg_R8gE1OnqThhx6jPeAiBnfOFl)
-- https://youtu.be/YkOSUVzOAA4?t=4102
+- https://youtu.be/YkOSUVzOAA4?t=4778
+
+# Related
+
+- Twitter Clone using Next.js 13 (with Tailwind CSS, TypeScript and SupaBase: https://github.com/sonipranjal/ultimate-twitter-clone + https://youtu.be/QdxUZhLHZiA
+- https://github.com/zws-im/zws#self-hosting
 
 # Tool
 

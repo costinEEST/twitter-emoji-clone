@@ -4,8 +4,11 @@ import Image from "next/image";
 import Head from "next/head";
 import { SignInButton, useUser } from "@clerk/nextjs";
 
+import { Spinner } from "~/components/loading";
+
 import { api } from "~/utils/api";
 
+import type { NextPage } from "next";
 import type { RouterOutputs } from "~/utils/api";
 type PostWithUser = RouterOutputs["posts"]["getAll"][number];
 
@@ -31,6 +34,22 @@ const CreatePostWizard = () => {
   ) : null;
 };
 
+const Feed = () => {
+  const { data, isLoading: postsLoading } = api.posts.getAll.useQuery();
+
+  if (postsLoading) return <Spinner size={60} />;
+
+  if (!data) return <p>Something went wrong</p>;
+
+  return (
+    <div className="flex flex-col overflow-y-scroll">
+      {[...data]?.map((fullPost) => (
+        <PostView {...fullPost} key={fullPost.post.id} />
+      ))}
+    </div>
+  );
+};
+
 const PostView = (props: PostWithUser) => {
   const { post, author } = props;
   return (
@@ -49,19 +68,17 @@ const PostView = (props: PostWithUser) => {
             post.createdAt
           ).fromNow()}`}</span>
         </div>
-        <span>{post.content}</span>
+        <span className="text-2xl">{post.content}</span>
       </div>
     </div>
   );
 };
 
-export default function Home() {
+const Home: NextPage = () => {
   const { isSignedIn } = useUser();
-  const { data, isLoading } = api.posts.getAll.useQuery();
 
-  if (isLoading) return <p>Loading...</p>;
-
-  if (!data) return <p>Something went wrong</p>;
+  // Start fetching ASAP to cache the posts with React Query
+  api.posts.getAll.useQuery();
 
   return (
     <>
@@ -87,13 +104,12 @@ export default function Home() {
               </div>
             )}
           </div>
-          <div className="flex flex-col overflow-y-scroll">
-            {[...data]?.map((fullPost) => (
-              <PostView {...fullPost} key={fullPost.post.id} />
-            ))}
-          </div>
+
+          <Feed />
         </div>
       </main>
     </>
   );
-}
+};
+
+export default Home;
